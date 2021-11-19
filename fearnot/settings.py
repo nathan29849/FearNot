@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # 정적 파일 관리에 대한 코드
 STATIC_DIRS = [
-    os.path.join(BASE_DIR, "static"),   # BASE_DIR 설정해주기 (css, js, img 파일 따로 관리하기 위해서)
+    os.path.join(BASE_DIR, "statics"),   # BASE_DIR 설정해주기 (css, js, img 파일 따로 관리하기 위해서)
 ]
 
 # Default primary key field type
