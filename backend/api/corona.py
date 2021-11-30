@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup
 from api.models import TotalData
 from my_settings import API_KEY
 import requests
-import copy
-
 
 url = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19GenAgeCaseInfJson"
 Key = API_KEY
@@ -204,4 +202,5 @@ check_day = "".join(check_day.split("-"))    # 2020-04-14 -> 20200414
 
 
 # 2020년 1월 20일부터 DB에 넣는 날까지를 param으로 넣어줌
-add_data("20200120", check_day)
+
+add_data("20200120", "20211115")
