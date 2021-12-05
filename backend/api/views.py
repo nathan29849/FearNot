@@ -33,5 +33,5 @@ def getCoronaAPI(request, start, end):
     serializer = TotalDataSerializer(total_data, many=True)
     return Response(serializer.data)
 
-# def test(request):
+
     
