@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+import Fatality from "./Pages/Fatality";
+import Abroad from "./Pages/Abroad";
+import MajorDisease from "./Pages/MajorDisease";
+import Advertisement from "./Pages/Advertisement";
+import "./App.css";
+import Bar from "./Components/Common/Bar";
+import styled from "styled-components";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrap>
+      <Bar />
+      <Route exact path="/" component={Fatality} />
+      <Route path="/Abroad" component={Abroad} />
+      <Route path="/MajorDisease" component={MajorDisease} />
+      <Route path="/Advertisement" component={Advertisement} />
+    </AppWrap>
   );
 }
 
-export default App;
+const AppWrap = styled.div`
+  width: 1000px;
+  display: flex;
+  height: 1118px;
+`;
